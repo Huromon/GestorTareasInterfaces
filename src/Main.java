@@ -89,7 +89,7 @@ public class Main {
                     System.out.println("no se ha encontrado ninguna tarea que quieras eliminar");
                 }
 
-            } else if (num == 5) {
+            } else if (num == 7) {
                 inicio = false;
             }
          }
