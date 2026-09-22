@@ -11,5 +11,19 @@ public class Tarea {
         comprobarPrioridad(prioridad);
     };
 
-   public void comprobarPrioridad(String prioridad) {}
+   public void comprobarPrioridad(String prioridad) {
+       if (prioridad.equalsIgnoreCase("alta")) {
+           this.prioridad = "alta";
+       }
+       else if (prioridad.equalsIgnoreCase("media")) {
+           this.prioridad = "media";
+       }
+       else if (prioridad.equalsIgnoreCase("baja")) {
+           this.prioridad = "baja";
+       }
+       else {
+           this.prioridad = "ninguna";
+       }
+
+   }
 }
