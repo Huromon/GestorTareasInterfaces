@@ -64,16 +64,31 @@ public class Main {
 
 
             } else if (num == 4) {
+                boolean encontrado = false;
                 System.out.println("Lista pendiente;");
                 System.out.println(listaPendiente);
                 System.out.println("Lista completada:");
                 System.out.println(listaCompletada);
                 System.out.println("Escribe el nombre de la tarea que quieras eliminar");
                 String nombreTarea = sc.next();
-                if (nombreTarea.equalsIgnoreCase(nombreTarea)) {
-                    listaPendiente.remove(nombreTarea);
-                    listaCompletada.remove(nombreTarea);
+                for (int i = 0; i < listaPendiente.size(); i++) {
+                    Tarea tarea = listaPendiente.get(i);
+                    if (tarea.getNombre().equalsIgnoreCase(nombreTarea)) {
+                        listaPendiente.remove(tarea);
+                        encontrado = true;
+                    }
                 }
+                for (int i = 0; i < listaCompletada.size(); i++) {
+                    Tarea tarea = listaCompletada.get(i);
+                    if (tarea.getNombre().equalsIgnoreCase(nombreTarea)) {
+                        listaCompletada.remove(tarea);
+                        encontrado = true;
+                    }
+                }
+                if (encontrado == false) {
+                    System.out.println("no se ha encontrado ninguna tarea que quieras eliminar");
+                }
+
             } else if (num == 5) {
                 inicio = false;
             }
