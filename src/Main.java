@@ -1,3 +1,4 @@
+import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -10,7 +11,7 @@ public class Main {
         ArrayList<Tarea> listaPendiente = new ArrayList<>();
         ArrayList<Tarea> listaCompletada = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-
+        String continuar;
 
 
         boolean inicio = true;
@@ -123,11 +124,13 @@ public class Main {
                     fw.write("tareas pendientes:\n");
                     for (int i = 0; i < listaPendiente.size(); i++) {
                     fw.write(listaPendiente.get(i).toString());
-                    }
                     fw.write("\n");
+                    }
+
                     fw.write("tareas completas:\n");
                     for (int i = 0; i < listaCompletada.size(); i++) {
                         fw.write(listaCompletada.get(i).toString());
+                        fw.write("\n");
                     }
                     fw.close();
 
@@ -139,6 +142,7 @@ public class Main {
             } else if (num == 7) {
                 inicio = false;
             }
+
          }
 
         while (inicio);

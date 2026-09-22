@@ -1,0 +1,4 @@
+Lista de tareas
+tareas pendientes:
+tarea1 - lol - mediatarea2 - wow - bajatarea3 - lmao - ninguna
+tareas completas:
