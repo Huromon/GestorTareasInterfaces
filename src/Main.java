@@ -1,12 +1,15 @@
 import java.util.ArrayList;
 import java.util.Scanner;
- 
+
 public class Main {
     public static void main(String[] args) {
         int num = 0;
-        ArrayList<String> listaPendiente = new ArrayList<>();
-        ArrayList<String> listaCompletada = new ArrayList<>();
+        ArrayList<Tarea> listaPendiente = new ArrayList<>();
+        ArrayList<Tarea> listaCompletada = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
+
+
+
         boolean inicio = true;
         do {
             System.out.println("MENU GESTOR TAREAS \n");
@@ -21,12 +24,18 @@ public class Main {
 
                 System.out.println("Escriba el nombre de la tarea");
                 String nombre = sc.next();
+                System.out.println("Escriba el nombre de la tarea");
+                String descripcion = sc.next();
+                System.out.println("Escriba el nombre de la tarea");
+                String prioridad = sc.next();
+                Tarea nueva = new Tarea(nombre,descripcion,prioridad);
                 System.out.println("Esta tarea esta completada? s/n");
                 String decision = sc.next();
                 if (decision.equalsIgnoreCase("n")) {
-                    listaPendiente.add(nombre);
+
+                    listaPendiente.add(nueva);
                 } else {
-                    listaCompletada.add(nombre);
+                    listaCompletada.add(nueva);
 
                 }
             } else if (num == 2) {

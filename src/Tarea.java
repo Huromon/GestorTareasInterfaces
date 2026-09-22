@@ -53,7 +53,7 @@ public class Tarea {
     public void setPrioridad(String prioridad) {
      comprobarPrioridad(prioridad);
     }
-    Override
+    @Override
     public String toString() {
        return getNombre() + " - " + getDescripcion() + " - " + getPrioridad();
     }
