@@ -20,16 +20,18 @@ public class Main {
             System.out.println(" 2- Ver Tareas Pendientes \n");
             System.out.println(" 3- Marcar una Tarea como completada \n");
             System.out.println(" 4- Eliminar una Tarea \n");
-            System.out.println(" 5- salir");
+            System.out.println(" 5- Filtrar por Prioridad \n");
+            System.out.println(" 6- Guardar lista\n");
+            System.out.println(" 7- salir\n");
             num = sc.nextInt();
 
             if (num == 1) {
 
                 System.out.println("Escriba el nombre de la tarea");
                 String nombre = sc.next();
-                System.out.println("Escriba el nombre de la tarea");
+                System.out.println("Escriba el la descripcion de la tarea");
                 String descripcion = sc.next();
-                System.out.println("Escriba el nombre de la tarea");
+                System.out.println("Escriba la prioridad de la tarea (alta/media/baja/ninguna)");
                 String prioridad = sc.next();
                 Tarea nueva = new Tarea(nombre,descripcion,prioridad);
                 System.out.println("Esta tarea esta completada? s/n");
