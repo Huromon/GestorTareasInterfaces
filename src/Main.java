@@ -89,6 +89,24 @@ public class Main {
                     System.out.println("no se ha encontrado ninguna tarea que quieras eliminar");
                 }
 
+            }else if (num == 5) {
+                System.out.println("¿Por que prioridad desea filtrar?(alta/medio/baja/ninguna)");
+                String prioridad = sc.next().toLowerCase();
+                for (int i = 0; i < listaPendiente.size(); i++) {
+                    Tarea tarea = listaPendiente.get(i);
+                    if (tarea.getPrioridad().equalsIgnoreCase(prioridad)) {
+                        System.out.println(tarea.toString());
+                    }
+                }
+                for (int i = 0; i < listaCompletada.size(); i++) {
+                    Tarea tarea = listaCompletada.get(i);
+                    if (tarea.getPrioridad().equalsIgnoreCase(prioridad)) {
+                        System.out.println(tarea.toString());
+                    }
+                }
+
+            }else if (num == 6){
+
             } else if (num == 7) {
                 inicio = false;
             }
