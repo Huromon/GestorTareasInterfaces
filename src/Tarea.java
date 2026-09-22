@@ -1,13 +1,12 @@
 public class Tarea {
     String nombre;
     String descripcion;
-    boolean pendiente;
+
     String prioridad;
 
-   Tarea(String nombre,String descripcion,boolean pendiente,String prioridad) {
+   Tarea(String nombre,String descripcion,String prioridad) {
         this.nombre = nombre;
         this.descripcion = descripcion;
-        this.pendiente = pendiente;
         comprobarPrioridad(prioridad);
     };
 
@@ -43,13 +42,9 @@ public class Tarea {
         this.descripcion = descripcion;
     }
 
-    public boolean isPendiente() {
-        return pendiente;
-    }
 
-    public void setPendiente(boolean pendiente) {
-        this.pendiente = pendiente;
-    }
+
+
 
     public String getPrioridad() {
         return prioridad;
@@ -57,5 +52,9 @@ public class Tarea {
 
     public void setPrioridad(String prioridad) {
      comprobarPrioridad(prioridad);
+    }
+    Override
+    public String toString() {
+       return getNombre() + " - " + getDescripcion() + " - " + getPrioridad();
     }
 }
