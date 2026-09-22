@@ -1,3 +1,6 @@
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -106,6 +109,30 @@ public class Main {
                 }
 
             }else if (num == 6){
+                try {
+
+                    File archivo = new File("Lista_de_tareas.txt");
+                    if (archivo.exists()) {
+                        archivo.delete();
+                        archivo.createNewFile();
+                    }
+                    FileWriter fw = new FileWriter(archivo,true);
+                    fw.write("Lista de tareas\n");
+                    fw.write("tareas pendientes:\n");
+                    for (int i = 0; i < listaPendiente.size(); i++) {
+                    fw.write(listaPendiente.get(i).toString());
+                    }
+                    fw.write("\n");
+                    fw.write("tareas completas:\n");
+                    for (int i = 0; i < listaCompletada.size(); i++) {
+                        fw.write(listaCompletada.get(i).toString());
+                    }
+                    fw.close();
+
+                }catch (IOException e){
+
+                }
+
 
             } else if (num == 7) {
                 inicio = false;
