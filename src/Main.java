@@ -46,13 +46,23 @@ public class Main {
                 }
 
             } else if (num == 3) {
+                boolean encontrado = false;
                 System.out.println(listaPendiente);
                 System.out.println("Escribe el nombre de la tarea que quieras completar");
                 String nombreTarea = sc.next();
-                if (nombreTarea.equalsIgnoreCase(nombreTarea)) {
-                    listaPendiente.remove(nombreTarea);
-                    listaCompletada.add(nombreTarea);
+                for (int i = 0; i < listaPendiente.size(); i++) {
+                    Tarea tarea = listaPendiente.get(i);
+                    if (tarea.getNombre().equalsIgnoreCase(nombreTarea)) {
+                        listaPendiente.remove(tarea);
+                        listaCompletada.add(tarea);
+                        encontrado = true;
+                    }
                 }
+                if (encontrado == false ) {
+                    System.out.println("El nombre de la tarea no existe en pendientes");
+                }
+
+
             } else if (num == 4) {
                 System.out.println("Lista pendiente;");
                 System.out.println(listaPendiente);
