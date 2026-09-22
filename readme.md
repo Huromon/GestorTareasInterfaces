@@ -10,7 +10,9 @@ Gestion de la lista de tareas desde la consola
 2. Ver tareas pendientes
 3. Marcar una tarea como completada
 4. Borrar una tarea
-5. Salir
+5. Filtrar tareas por prioridad
+6. Guardar lista de tareas
+7. Salir
 
 Para ejecutar el comando escribe el numero correspondiente y pulse `Enter`
 
