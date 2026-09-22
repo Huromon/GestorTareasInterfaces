@@ -40,7 +40,10 @@ public class Main {
                 }
             } else if (num == 2) {
                 System.out.println("Tareas pendientes");
-                System.out.println(listaPendiente);
+                for (int i = 0; i < listaPendiente.size(); i++) {
+                    Tarea tarea = listaPendiente.get(i);
+                    System.out.println(tarea.toString());
+                }
 
             } else if (num == 3) {
                 System.out.println(listaPendiente);
